@@ -18,7 +18,7 @@ def findpassword(name,password):
             return 1
 
 
-def printditails(name):
+def printDetails(name):
     for y,x in accounts.items():
         if accounts[y]["username"]==name:
             print("hello", accounts[y]["fullname"])        
@@ -29,7 +29,7 @@ def main():
     if finduser(name):
         password= getpass.getpass("enter password: ")
         if findpassword(name,password):
-            printditails(name)
+            printDetails(name)
         else:
             os.system('clear')
             print("worng")
